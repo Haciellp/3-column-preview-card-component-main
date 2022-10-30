@@ -13,6 +13,8 @@
     box-sizing: border-box;
 }
 body{
+    position: relative;
+    overflow-x: hidden;
     height: 1498px;
     width: 100vw;
     display: flex;
@@ -20,13 +22,15 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .cards_container{
+    margin-bottom: 5px;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 8px;
     color: white;
     display: grid;
     grid-template-columns: 323px;
-    grid-template-rows: 420px 420px 420px;
+    grid-template-rows: 430px 430px 430px;
 }
 #card_1{
     background-color: var(--Bright_orange);
@@ -50,14 +54,14 @@ body{
     font-weight: 700;
 }
 .cards > p {
-    font-size: 1.05rem;
+    font-size: 1rem;
     line-height: 25px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
 }
 
 .cards > img {
-    width: 50px;
+    width: 70px;
 }
 .btn{
     font-family: 'Lexend Deca', sans-serif;
@@ -72,13 +76,58 @@ body{
 .btn_2{color: var(--Dark_cyan);}
 .btn_3{color: var(--Very_dark_cyan);}
 
-
-
-
-
-
+.btn:hover{
+    transition: color, background-color 100ms;
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+}
 .attribution { 
     font-size: 11px; 
     text-align: center;
 }
 .attribution a { color: hsl(228, 45%, 44%); } 
+
+/*--------------------media queries min-width 728px----------------------*/
+@media screen and (min-width:768px) {
+
+    body{
+        height: 100vh;
+        width: 100;
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards_container{
+     scale: 1.1;
+    }
+    .attribution { 
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    }
+
+}
+/*--------------------media queries min-width 1024px----------------------*/
+@media screen and (min-width:1024px) {
+    .cards_container{
+        overflow: hidden;
+        border-radius: 8px;
+        color: white;
+        display: grid;
+        grid-template-columns: 309px 309px 309px;
+        grid-template-rows: 501px;
+    }
+
+    .cards > :not(button){
+        margin-bottom: 40px;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+}
