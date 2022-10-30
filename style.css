@@ -44,7 +44,7 @@ body{
 .cards{
     padding: 40px 40px;
 }
-.cards > :not(button){
+.cards > :not(.btn){
     margin-bottom: 30px;
 }
 .cards > h2 {
@@ -64,6 +64,7 @@ body{
     width: 70px;
 }
 .btn{
+    background-color: white;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -72,14 +73,17 @@ body{
     height: 50px;
     width: 150px;
 }
-.btn_1{color: var(--Bright_orange);}
-.btn_2{color: var(--Dark_cyan);}
-.btn_3{color: var(--Very_dark_cyan);}
+.btn a{
+    text-decoration: none;
+}
+.btn_1 {color: var(--Bright_orange);}
+.btn_2 {color: var(--Dark_cyan);}
+.btn_3 {color: var(--Very_dark_cyan);}
 
 .btn:hover{
+    color: white;
     transition: color, background-color 100ms;
     cursor: pointer;
-    color: white;
     border: 2px solid white;
     background-color: transparent;
 }
@@ -124,7 +128,7 @@ body{
         grid-template-rows: 501px;
     }
 
-    .cards > :not(button){
+    .cards > :not(.btn){
         margin-bottom: 40px;
     }
     .btn{
